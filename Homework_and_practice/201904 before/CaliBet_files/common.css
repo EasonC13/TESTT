@@ -1,0 +1,1040 @@
+@charset 'UTF-8';
+
+
+body.homepage.mobile {
+	background-size: cover;
+	background-position: center center;
+}
+
+body.homepage.pc .canvasWrapper.loading{
+	background-image: none;
+	background-color: #000;
+}
+body.homepage.pc .canvasWrapper{
+    background-image: url('../images/bg.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+
+.pc{
+	background-color: #000;
+	font-family: PingFang TC, PingFang SC, 微軟雅黑, Microsoft YaHei, arial, sans-serif;
+}
+.pc canvas{
+	display: block;
+}
+/* fix width too narrow */
+@media (max-width: 1024px) { 
+	.pc #loaderContainer{
+		width: 70vw;
+		margin:0 auto;
+	}
+	.pc #loaderContainer .loaderLogo{
+		padding: 1.5vw 0 1vw;
+	}
+}
+
+.IIV::-webkit-media-controls-play-button,
+.IIV::-webkit-media-controls-start-playback-button {
+			opacity: 0;
+			pointer-events: none;
+			width: 5px;
+	}
+
+
+/* width */
+#gameRules::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+/* Track */
+#gameRules::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+/* Handle */
+#gameRules::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #888;
+}
+
+/* Handle on hover */
+#gameRules::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+video{
+	opacity: 0;
+	visibility: hidden;
+	top:0;
+	left:0;
+}
+video#betVideoElement{
+	opacity: 1;
+	visibility: visible;
+}
+.pc #main .canvasWrapper .videoCanvas{
+	position: absolute;
+	top: 0;
+	left:0;
+}
+
+#gameRules {
+    font-family: "Arial";
+    font-size: 25px;
+    color: #fff;
+    padding: 0 10px 0 0;
+    text-align: left;
+    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    z-index: 20;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-overflow-scrolling: touch; /* iphone*/
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+#gameRules p{
+	padding:2px 5px;
+	line-height: 100%;
+}
+#gameRules ol{
+	padding:0 5px;
+}
+#gameRules .gameRulesTable tr{
+    padding: 0 10px 0 10px;
+}
+#gameRules .gameRulesTable td{
+    border: 1px solid #ffffff;
+    padding: 0 10px 0 10px;
+}
+#gameRules .imageGameRules1{
+    width:100%;
+}
+
+.pc #main .createjsTextField.rescordFilter{
+	width : 250px;
+	height: 32px;
+	padding-left:10px;
+    z-index: 999;
+}
+.pc #main .createjsTextField#txtAmount{
+	width : 280px;
+	height: 32px;
+	padding-left:10px;
+}
+
+.betVideoContainer {
+	text-align:center;
+	overflow: hidden;
+	position:absolute;
+	top: 0;
+	left: 0;
+	width: 750px;
+	height: 390px;
+}
+
+.betVideoContainer .videoProgress {
+  	background-color: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	position: absolute;
+	bottom: 0px;
+	left: 2%;
+	width: 96%;
+	height: 37px;
+	padding: 43px;
+	margin: 0;
+	overflow: initial;
+	z-index: 9999;
+}
+
+.betVideoContainer input[type=range] {
+  	-webkit-appearance: none;
+  	margin: 9px 0;
+  	width: 97%;
+  	background-color: transparent;
+}
+.betVideoContainer input[type=range]:focus {
+  	outline: none;
+}
+.betVideoContainer input[type=range]::-webkit-slider-runnable-track {
+  	width: 100%;
+  	height: 12.4px;
+  	cursor: pointer;
+  	animate: 0.2s;
+  	background: #fff;
+  	border-radius: 1.3px;
+  	border: 0.2px solid #010101;
+}
+.betVideoContainer input[type=range]::-webkit-slider-thumb {
+  	box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  	border: 1px solid #000000;
+  	height: 40px;
+  	width: 40px;
+  	border-radius: 20px;
+  	background: #ffffff;
+  	cursor: pointer;
+  	-webkit-appearance: none;
+  	margin-top: -15px;
+}
+.betVideoContainer input[type=range]:focus::-webkit-slider-runnable-track {
+  	background: #fff;
+}
+.betVideoContainer input[type=range]::-moz-range-track {
+  	width: 100%;
+ 	height: 12.4px;
+  	cursor: pointer;
+  	animate: 0.2s;
+  	background: #fff;
+  	border-radius: 1.3px;
+  	border: 0.2px solid #010101;
+}
+.betVideoContainer input[type=range]::-moz-range-thumb {
+  	box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  	border: 1px solid #000000;
+  	height: 40px;
+  	width: 40px;
+  	border-radius: 20px;
+  	background: #ffffff;
+  	cursor: pointer;
+}
+.betVideoContainer input[type=range]::-ms-track {
+  	width: 100%;
+  	height: 12.4px;
+  	cursor: pointer;
+  	animate: 0.2s;
+  	background: transparent;
+  	border-color: transparent;
+  	border-width: 16px 0;
+  	color: transparent;
+}
+.betVideoContainer input[type=range]::-ms-fill-lower {
+  	background: #fff;
+  	border: 0.2px solid #010101;
+  	border-radius: 2.6px;
+  	box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+.betVideoContainer input[type=range]::-ms-fill-upper {
+  	background: #fff;
+  	border: 0.2px solid #010101;
+  	border-radius: 2.6px;
+  	box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+.betVideoContainer input[type=range]::-ms-thumb {
+  	box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  	border: 1px solid #000000;
+  	height: 40px;
+  	width: 40px;
+  	border-radius: 20px;
+  	background: #ffffff;
+  	cursor: pointer;
+}
+.betVideoContainer input[type=range]:focus::-ms-fill-lower {
+  	background: #fff;
+}
+.betVideoContainer input[type=range]:focus::-ms-fill-upper {
+  	background: #fff;
+}
+
+.betVideoContainer #betVideoElement {
+	z-index: 9000;
+	top: 0;
+	left: 0;
+	width: 750px;
+	height: auto;
+	-webkit-transition: all .5s ease; /* Safari */
+	transition: all .5s ease;
+}
+
+.betVideoContainer #betVideoElement.zoom {
+	width: 260% !important;
+	height: auto;
+	margin: -60% auto auto -80%;
+}
+
+.betVideoContainer #betVideoElement.zoom.Sicbo {
+	margin: -13% auto auto -17%;
+}
+
+.betVideoContainer #betVideoElement.zoom.Roulette {
+	width: 200% !important;
+	margin: -60% auto auto -97%;
+}
+
+.betVideoContainer .videoProgressPlayed {
+  position: absolute;
+  right: 20px;
+  bottom: 45px;
+  text-align: right;
+  font-size: 20px;
+  color: #fff;
+  height: 50px;
+}
+
+.betVideoControls {
+	background: rgba(0,0,0,0.5) !important;
+	width: 100px;
+	height: 300px;
+	position: absolute;
+	top: 0%;
+	left: 2%;
+	z-index: 9500;
+}
+
+.betVideoControls span {
+	display: block;
+	width: 100px;
+	height: 100px;
+	cursor: pointer;
+	border-bottom: solid 2px #000;
+	background-position: center center;
+	background-size: 60%;
+	background-repeat: no-repeat;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.betVideoControls span:focus {
+	background-color: rgba(255,255,255,0.1);
+}
+
+.betVideoControlZoom.zoomIn { background-image: url(../images/controls/zoom-in.svg); }
+.betVideoControlZoom.zoomOut { background-image: url(../images/controls/zoom-out.svg); }
+.betVideoControlPlay.play { background-image: url(../images/controls/play.svg); }
+.betVideoControlPlay.pause { background-image: url(../images/controls/pause.svg); }
+.betVideoControlReplay.replay { background-image: url(../images/controls/replay.svg); }
+
+#main{
+	margin:auto;
+}
+#popupLayer{
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+	height:100%;
+	background: rgba(0, 0, 0, 1);
+	display: none;
+}
+
+#popupLayer .popup .errorContent a:active{
+	background-color: #000000;
+	color: #FFFFFF;
+	border-color: #FEEA7C;
+}
+
+.pc #popupLayer{
+	position: relative;
+	display: none;
+	top: initial;
+	left: initial;
+	background-color: transparent;	
+	height:1080px;
+	width:1832px;
+	z-index:100;
+}
+.pc #main .popup .errorContent{
+	max-width: 380px;
+}
+
+.pc #popupLayer.show{
+	z-index: 999;
+}
+
+#main .canvasWrapper {
+	margin:0 auto;
+	padding: 0;
+	display:inline-block;
+
+	position:relative;
+	overflow: hidden;
+}
+
+.mobile #main .canvasWrapper #canvas  {
+	max-width: 1024px;
+	max-height: 1366px;
+	width: 100%;
+	height: 100%;
+	position:relative;
+}
+
+.mobile #main .canvasWrapper #canvasTop  {
+	max-width: 1024px;
+	max-height: 1366px;
+	width: 100%;
+	height: 100%;
+	position:absolute;
+    z-index: 10;
+}
+
+.pc #main .canvasWrapper #canvas {
+	width: 100%;
+	height: 100%;
+	position:relative;
+}
+
+.pc #main .canvasWrapper #canvasTop  {
+	/*max-width: 1024px;
+	max-height: 1366px;*/
+	width: 100%;
+	height: 100%;
+	position:absolute;
+    z-index: 10;
+}
+
+#trial{
+	max-width: 1024px;
+	max-height: 1366px;
+	width: 100%;
+	height: 100%;
+	position:absolute;
+	top:0;
+	left:0;
+	pointer-events:none;
+}
+#main .canvasWrapper #loadingScreen {
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+}
+
+#main .createjsTextField {
+	
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 99;
+	/* color: black; */
+	
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	
+	background: transparent;
+	-webkit-appearance: none;
+	
+    border: none;
+	border-radius: 0;
+	margin: 0;
+	padding: 0;
+	
+	height: 76px;
+	transition: opacity 0.3s ease-out;
+	-webkit-transition: opacity 0.3s ease-out;
+	-moz-transition: opacity 0.3s ease-out;
+	pointer-events: auto;
+}
+
+.pc #main .createjsTextField {
+	
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 99;
+	
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+
+	-webkit-appearance: none;
+	
+    border: none;
+	border-radius: 0;
+	margin: 0;
+	padding: 0;
+	
+	height: 76px;
+	transition: opacity 0.3s ease-out;
+	-webkit-transition: opacity 0.3s ease-out;
+	-moz-transition: opacity 0.3s ease-out;
+	pointer-events: auto;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+    background: transparent;
+    -webkit-appearance: none;
+
+    border: none;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+
+    height: 39px;
+    transition: opacity 0.3s ease-out;
+    -webkit-transition: opacity 0.3s ease-out;
+    -moz-transition: opacity 0.3s ease-out;
+    pointer-events: auto;
+
+}
+
+#main .loginTextField,
+#main .passwordTextField,
+#main .txtField {
+    font-size: 30px;
+    /* line-height: 78px; */
+    border: 0;
+    width: 502px;
+    padding-left: 10px;
+}
+#main .platformLineTxt {
+    color: #FFFFFF;
+    font-size:36px;
+}
+.pc #main .loginTextField,
+.pc #main .passwordTextField,
+.pc #main .txtField {
+    border: 0;
+    width: 348px;
+    font-size: 23px;
+    padding-left: 15px;
+    /*opacity: .5 !important;*/
+}
+.pc #main .txtField.enterPass {
+	background-color: white;
+	font-size: 17px;
+	width:160px;
+}
+
+.pc #main .loginTextField#txtCaptcha{
+	width:137px;
+	font-size: 20px;
+}
+.pc #main .captchaTxtField {
+	font-size: 24px;
+	border:0;
+	width: 185px;
+	padding-left:5px;
+}
+#main .captchaTxtField {
+	font-size: 40px;
+	/* line-height: 78px; */
+	border:0;
+	width: 230px;
+	padding-left:0;
+}
+#main .tablePassField {
+	padding-left: 85px;
+	width: 550px;
+	opacity: 0;
+}
+#main .passwordTextField {
+	width: 590px;
+	padding-left: 35px;
+	padding-right: 10px;
+	opacity: 0;
+}
+
+.pc #main .passwordTextField {
+	width: 240px;
+	padding-left: 5px;
+	padding-right: 4px;
+	opacity: 0;
+    height: 30px;
+    font-size: 20px;
+    caret-color: #fff;
+    color: #fff;
+}
+.pc #main .passwordTextFieldBlack {
+	width: 240px;
+	padding-left: 5px;
+	padding-right: 4px;
+	opacity: 0;
+    height: 30px;
+    font-size: 20px;
+    caret-color: #fff;
+    color: black;
+}
+
+
+#main .password .passwordTextField{
+	-webkit-transition: opacity 0.2s ease;  /* Safari */
+	transition: opacity 0.2s ease;
+}
+#main .enterPass{
+	color:darkgray;
+}
+#main .enterPassPC {
+    color: darkgray;
+    font-size:40px;
+}
+#main .loginDropdown {
+	width: 597px;
+	line-height: 78px;
+	border: 0;
+	padding: 0;
+	/*remove arrow*/
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	opacity: 0 !important;
+	cursor: pointer;
+	font-size: 32px;
+	z-index: 100;
+}
+#main .betRecordDropdown {
+    width: 180px;
+    line-height: 78px;
+    border: 0;
+    padding: 0;
+    text-align:center;
+    /*remove arrow*/
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    opacity: 0 !important;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 100;
+}
+#main #lineSelection{
+	z-index: 99;	
+}
+
+.pc #main .loginDropdown {
+	width: 368px;
+    line-height: 46px;
+	font-size: 23px;
+    color: #9D9D9D;
+    border: 0;
+    padding: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    opacity: 0 !important;
+    cursor: pointer;
+}
+
+#lineSelectionOver::after {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 20px 20px 0 20px;
+	border-color: #000000 transparent transparent transparent;
+	position: absolute;
+	top: calc(50% - 10px);
+	right: 10px;
+	content: ' ';
+}
+#lineSelectionOver.noArrow::after{
+	content: none;	
+}
+#lineSelection.noArrow{
+	cursor: auto;
+}
+
+.pc #lineSelectionOver::after {
+	display:none;
+}
+.pc #main #lineSelection {
+    top: 0;
+    left: 0;
+    z-index: 99;
+    border:0;
+    box-sizing: border-box;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+    color: #777777;
+    caret-color: #fff;
+    width: 346px;
+    max-height: 180px;
+}
+.pc #main #lineSelection option:checked{
+    background-color: #FCED77;
+}
+.pc #main #lineSelection option:hover{
+    cursor: pointer;
+    background-color: #FCED77;
+}
+.pc #main #lineSelection:focus{
+    outline:none;
+}
+
+#main .handicapDropdown {
+	width: 250px;
+    height: 54px;
+    line-height: 22px;
+	/*remove arrow*/
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	opacity: 0 !important;
+    z-index: 15;
+}
+
+#main .handicapDropdown option {
+	width: 100%;
+    font-size: 16px;
+}
+
+#main .lineOver {
+	opacity: 1 !important;
+	z-index: 0;
+}
+
+.pc #main .lineOver {
+	opacity: 1 !important;
+	z-index: 99;
+    width: 348px;
+}
+
+#main .lineOver.gradient{
+	color: #FFFFFF;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+49,877648+80,d6ceb1+100 */
+	background: #000000; /* Old browsers */
+	background: -moz-linear-gradient(top, #000000 70%, #4f4934 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #000000 70%,#4f4934 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #000000 70%,#4f4934 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#4f4934',GradientType=0 ); /* IE6-9 */
+
+	border:2px solid #fdf0d7;
+	border-radius: 10px;
+}
+#lineSelectionOver.gradient::after{
+	border-color: #fdf0d7 transparent transparent transparent;
+}
+
+input:focus {
+	outline: none;
+}
+
+#main .loginDropdown::-ms-expand {
+	display: none;
+}
+#main .loginDropdown option {
+	font-size: 24px;
+}
+#main .toast{
+	/*background:rgba(0,0,0,0.7);*/
+	height:100px;
+	position:absolute;
+	z-index:100;
+	left:0;
+	right:0;
+	bottom:0;
+	top:180px;
+	display: none;
+	text-align:center;
+	pointer-events: none;
+	/*overflow: visible;*/
+}
+.pc #main .toast{
+	/* background:rgba(255,0,0,0.7); */
+	background-color: transparent;
+	width: 1677px;
+	height:500px;
+	left:0;
+	top: 0;
+}
+#main .toast .content{
+	font-size:22px;
+	padding:10px 35px;
+	color:rgb(206, 206, 206);
+	/*border-radius:10px;*/
+	background-color: rgba(0,0,0,0.5);
+	display:inline-block;
+	border: 1px solid #EBE4CA;
+	max-width: 500px;
+}
+.pc #main .toast .content{
+	color:#fff3aa;
+	font-size:30px;
+	padding: 30px 100px;
+	border:0;
+
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+20,000000+80,000000+100&0+0,1+20,1+80,0+100 */
+	background: -moz-linear-gradient(left, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 20%, rgba(0,0,0,0.8) 80%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 20%,rgba(0,0,0,0.8) 80%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 20%,rgba(0,0,0,0.8) 80%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
+}	
+
+#main .popup{
+	width:100%;
+	height:100%;
+	background:rgba(0,0,0,0.7);
+	position:absolute;
+	z-index:101;
+	top:0px;
+	display:none;
+	text-align:center;
+}
+#main .popup .errorContent{
+	width:60%;
+	/* margin:40% auto; */
+	padding:5%;
+	border:#EBE4CA 1px solid;
+	color:#EBE4CA;
+	font-size:18px;
+	position: absolute;
+	top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    background-color: rgba(0,0,0,0.7);
+}
+.pc #main .popup .errorContent{
+	top: 50%;
+	padding: 60px 100px 30px;
+	border:0;
+	font-size: 24px;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+20,000000+80,000000+100&0+0,1+20,1+80,0+100 */
+	background: -moz-linear-gradient(left, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 20%, rgba(0,0,0,0.8) 80%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 20%,rgba(0,0,0,0.8) 80%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 20%,rgba(0,0,0,0.8) 80%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
+}
+#main .popup .errorMessage{
+	padding:0 0 5px 0;
+}
+#main .popup a{
+	display:inline-block;
+	margin: 5vw 1vw;
+	padding:1vw 3vw;
+	border:#EBE4CA 1px solid;
+	color:#000;
+	font-size:16px;
+	cursor:pointer;
+	background: #FEEA7C;
+	min-width: 60px;
+}
+.pc #main .popup a{
+	color: #EACF9A;
+	background-color: #000;
+	border:2px solid #D1B373;
+	border-radius: 15px;
+	
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,48494c+50,48494c+63,000000+100 */
+	background: rgb(0,0,0); /* Old browsers */
+	background: -moz-linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(72,73,76,1) 50%, rgba(72,73,76,1) 63%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(45deg, rgba(0,0,0,1) 0%,rgba(72,73,76,1) 50%,rgba(72,73,76,1) 63%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(45deg, rgba(0,0,0,1) 0%,rgba(72,73,76,1) 50%,rgba(72,73,76,1) 63%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.pc #main .popup a:hover{
+	color: #000;
+	
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f6cc8d+0,faeebd+50,f6cc8d+100 */
+	background: rgb(246,204,141); /* Old browsers */
+	background: -moz-linear-gradient(45deg, rgba(246,204,141,1) 0%, rgba(250,238,189,1) 50%, rgba(246,204,141,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(45deg, rgba(246,204,141,1) 0%,rgba(250,238,189,1) 50%,rgba(246,204,141,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(45deg, rgba(246,204,141,1) 0%,rgba(250,238,189,1) 50%,rgba(246,204,141,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6cc8d', endColorstr='#f6cc8d',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+#main .popup a:hover {
+	background: #FEEA7C;
+	color: #000;
+}
+#main .bankerRed{
+	color:#b91a00;
+	text-shadow: -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px 0 #FFF;
+}
+#main .playerBlue{
+	color:#000069;
+	text-shadow: -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px 0 #FFF;
+}
+@media(min-width: 801px){
+	#main .popup .errorContent{
+	    font-size: 20px;
+	    max-width: 400px;
+	    padding: 2%;
+	}
+	#main .popup .errorMessage {
+	    padding: 0 0 4vw 0;
+	}
+	#main .popup a {
+	    margin: 0 10px;
+	    padding: 0.5vw 2vw;
+	    font-size: 20px;
+	}
+}
+
+@media(min-width: 1199px){
+	#main .popup .errorContent {
+	    padding: 2% 1.5%;
+	}
+	#main .popup .errorMessage {
+	    padding: 0 0 2.5vw 0;
+	}
+}
+
+@media (max-width: 960px ) and (orientation : landscape ){
+	#main .popup .errorContent{
+	    font-size: 15px;
+	    max-width: 26vw;
+	    padding: 2%;
+	    -moz-box-sizing: border-box;
+	    box-sizing: border-box;
+	}
+	#main .popup .errorMessage {
+	    padding: 0 0 4vw 0;
+	}
+	#main .popup a {
+	    margin: 5px 1vw;
+	    padding: 0.5vw 2vw;
+	    font-size: 15px;
+	}
+}
+
+.pc #main .popup .errorMessage {
+	padding: 0 0 60px;
+}
+
+/*use to center select item*/
+select, option {
+	text-align-last:center;			/*chrome*/
+	-moz-text-align-last: center;	/*firefox*/
+
+}
+
+/* PASSWORD PAGE */
+
+@media (max-width: 700px ){
+	body.homepage.mobile {
+		background-image: url('../images/bg_mob.jpg');
+	}
+}
+
+#main .changeToPortrait{
+    z-index: 99999;
+    position:fixed;
+	top:0;
+	left:0;
+	bottom: 0;
+    background-color: #000000;
+    width: 100%;
+	display:none;
+    height: auto;
+	margin:0 0 0 0;
+    opacity: 0.8;
+	text-align: center;
+}
+#main .changeToPortrait img{
+	width:40%;
+	margin: auto;
+	margin-top: 5vw;
+}
+#main .changeToPortrait .rotateText{
+    color: #ebe4c9;
+    font-size: 25px;
+}
+
+#dataWarning {
+	padding:10px 0 0 0;
+}
+
+#statisticDiv{
+	position: absolute;
+	z-index:1000;
+	bottom:3px;
+	size:9px;
+	padding:3px;
+	color:#FFF;
+	background-color: rgba(0,0,0,0.8);
+	border: 1px solid #EBE4CA;
+	font-weight: bold;
+}
+.withdrawState{
+	width:5%;
+	right:0;
+}
+.extendState{
+	width:100%;
+}
+#statisticDiv span{
+	margin:0 3px 0 8px;
+}
+#statisticDiv .extend{
+	float:left;
+}
+#statisticDiv .bankerTxt{
+	color:#d81229;
+}
+#statisticDiv .playerTxt{
+	color:#3275fd;
+}
+#statisticDiv .tieTxt{
+	color:#3bb700;
+}
+#statisticDiv .statTxt{
+}
+/*--------------------------------------------------------multiplay*/
+#videoPopup {
+    width: 98%;
+    height: 400px;
+    z-index: 50;
+    position: absolute;
+    top: 50px;
+    background: #000000;
+    border: #FFF6A6 1px solid;
+}
+#videoPopup .tableName {
+   position:absolute;
+   top:0.5vw;
+   left:0.5vw;
+   color:#FFF;
+   z-index:200;
+   padding:1vw;
+   background-color:rgba(0,0,0,0.4);
+}
+#trimVideo {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position:relative;
+}
+#videoPopup .allButtons {
+    width:98%;
+    padding:0 0 0 1vw;
+}
+#videoPopup .channelBtn {
+    float: right;
+    color: #FFF6A6;
+    border: #FFF6A6 1px solid;
+    cursor:pointer;
+}
+#videoPopup .channelBtnOn {
+    background: #FFF6A6;
+    color:#000;
+}
+#videoPopup .allButtons img {
+    float: left;
+}
+#videoPopup #closeVideoBtn {
+    position: absolute;
+    top: 0vw;
+    right: 0vw;
+    z-index:200;
+}
+/*--------------------------------------------------------multiplay*/
+/*--------------------------------------------------------table video*/
+.vCanvasWrapper {
+    overflow: hidden;
+    position:absolute;
+    top:0;
+    left:0;
+}
+/*end load spin*/
